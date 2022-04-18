@@ -15,19 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var grennView: UIView!
     @IBOutlet weak var startButton: UIButton!
     
-    var stateLights = state.off
-    
-    enum state {
-        case off
-        case red
-        case yellow
-        case green
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-  
-    }
+    private var stateLights = State.off
     
     override func viewDidLayoutSubviews() {
         
@@ -59,5 +47,14 @@ class ViewController: UIViewController {
         
     }
     
+}
+
+extension ViewController {
+    enum State {
+        case off
+        case red
+        case yellow
+        case green
+    }
 }
 
